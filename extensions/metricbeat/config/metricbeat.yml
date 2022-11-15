@@ -1,5 +1,5 @@
 ## Metricbeat configuration
-## https://github.com/elastic/beats/blob/master/deploy/docker/metricbeat.docker.yml
+## https://github.com/elastic/beats/blob/main/deploy/docker/metricbeat.docker.yml
 #
 
 metricbeat.config:
@@ -34,7 +34,7 @@ processors:
 output.elasticsearch:
   hosts: ['http://elasticsearch:9200']
   username: elastic
-  password: changeme
+  password: ${ELASTIC_PASSWORD}
 
 ## HTTP endpoint for health checking
 ## https://www.elastic.co/guide/en/beats/metricbeat/current/http-endpoint.html
